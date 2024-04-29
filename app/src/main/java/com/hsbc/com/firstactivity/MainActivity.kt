@@ -28,9 +28,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"invalid valid user",Toast.LENGTH_LONG).show()
         }
         paymentGateWay()
-        //val intent = Intent(this@MainActivity,SecondActivity::class.java)
-        //intent.putExtra("category",category)
-        //startActivity(intent)
+        callApi()
 
     }
     private fun reverseString(name: String): String {
@@ -57,6 +55,13 @@ class MainActivity : AppCompatActivity() {
     fun validateUser(user:String):Boolean{
         return user.equals("deepak",ignoreCase = false)
     }
+
+    fun callApi(){
+        Log.i(TAG,"APi call successfully")
+
+    }
+
+
 
 
 }

@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         val category = Categoty(10,"manufacturing")
         val result= reverseString("deepak borade")
         Log.i("Main", result)
+        val isvalid = validateUser("Deepak")
         val intent = Intent(this@MainActivity,SecondActivity::class.java)
         intent.putExtra("category",category)
         startActivity(intent)
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         }
         result += word
         return result
+    }
+
+    fun validateUser(user:String):Boolean{
+        return user.equals("deepak",ignoreCase = false)
     }
 
 }

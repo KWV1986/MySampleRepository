@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.hsbc.com.firstactivity.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun paymentGateWay(){
      binding.textView.setText("Payment Gateway is added")
+        Toast.makeText(this,"This is sample toast",Toast.LENGTH_LONG).show()
         Log.i(TAG,"New log message is added")
 
     }

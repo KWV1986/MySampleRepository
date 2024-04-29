@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         val result= reverseString("deepak borade")
         Log.i("Main", result)
         val isvalid = validateUser("Deepak")
+        if(isvalid){
+
+            Toast.makeText(this,"valid user",Toast.LENGTH_LONG).show()
+        }
+        else{
+            Toast.makeText(this,"invalid valid user",Toast.LENGTH_LONG).show()
+        }
         paymentGateWay()
         val intent = Intent(this@MainActivity,SecondActivity::class.java)
         intent.putExtra("category",category)

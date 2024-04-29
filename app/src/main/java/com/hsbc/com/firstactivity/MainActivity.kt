@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"invalid valid user",Toast.LENGTH_LONG).show()
         }
         paymentGateWay()
-        val intent = Intent(this@MainActivity,SecondActivity::class.java)
-        intent.putExtra("category",category)
-        startActivity(intent)
+        //val intent = Intent(this@MainActivity,SecondActivity::class.java)
+        //intent.putExtra("category",category)
+        //startActivity(intent)
 
     }
     private fun reverseString(name: String): String {

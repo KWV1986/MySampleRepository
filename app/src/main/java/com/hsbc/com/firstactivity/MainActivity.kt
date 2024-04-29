@@ -4,16 +4,21 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.hsbc.com.firstactivity.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         val category = Categoty(10,"manufacturing")
         val result= reverseString("deepak borade")
         Log.i("Main", result)
         val isvalid = validateUser("Deepak")
+        paymentGateWay()
         val intent = Intent(this@MainActivity,SecondActivity::class.java)
         intent.putExtra("category",category)
         startActivity(intent)
@@ -32,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         }
         result += word
         return result
+    }
+    fun paymentGateWay(){
+     binding.textView.setText("Payment Gateway is added")
     }
 
     fun validateUser(user:String):Boolean{

@@ -8,6 +8,7 @@ import com.hsbc.com.firstactivity.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    private var TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -40,10 +41,13 @@ class MainActivity : AppCompatActivity() {
     }
     fun paymentGateWay(){
      binding.textView.setText("Payment Gateway is added")
+        Log.i(TAG,"New log message is added")
+
     }
 
     fun validateUser(user:String):Boolean{
         return user.equals("deepak",ignoreCase = false)
     }
+
 
 }
